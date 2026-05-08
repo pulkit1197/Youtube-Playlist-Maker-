@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Playlist Maker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div>
+      <h1>YouTube Playlist Maker</h1>
+      <p>Create playlists and play YouTube videos directly on your website.</p>
+    </div>
+
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#guide">Professor Guide</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- Instructions -->
+    <section class="box info-box">
+      <h2>How To Use</h2>
+      <p>
+        Step 1: Create Playlist → Step 2: Add YouTube Video URL →
+        Step 3: Open & Play Playlist
+      </p>
+      <button id="clearAllBtn" class="danger-btn">Clear All Playlists</button>
+    </section>
+
+    <div class="top-grid">
+
+      <!-- Create Playlist -->
+      <section class="box">
+        <h2>1) Create Playlist</h2>
+
+        <label for="playlistNameInput">Playlist Name</label>
+        <input id="playlistNameInput" type="text" placeholder="Example: Study Songs">
+
+        <button id="createPlaylistBtn">Create Playlist</button>
+      </section>
+
+      <!-- Add Video -->
+      <section class="box">
+        <h2>2) Add YouTube URL</h2>
+
+        <label for="playlistSelect">Select Playlist</label>
+        <select id="playlistSelect"></select>
+
+        <label for="videoTitleInput">Video Title</label>
+        <input id="videoTitleInput" type="text" placeholder="Example: Lo-fi Beats">
+
+        <label for="videoUrlInput">YouTube URL</label>
+        <input id="videoUrlInput" type="url" placeholder="https://www.youtube.com/watch?v=...">
+
+        <button id="addVideoBtn">Add URL To Playlist</button>
+      </section>
+    </div>
+
+    <!-- Playlists -->
+    <section class="box playlists-box">
+      <h2>3) My Playlists</h2>
+      <div id="playlistsContainer"></div>
+    </section>
+
+    <!-- Video Player -->
+    <section class="box player-box">
+      <h2>4) In-App Player</h2>
+
+      <p id="nowPlayingText" class="empty-text">
+        Pick any playlist and click "Play Full Playlist".
+      </p>
+
+      <div class="player-frame-wrap">
+        <iframe
+          id="playlistPlayerFrame"
+          title="YouTube Playlist Player"
+          src=""
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="box about-box" id="about">
+      <h2>About Us</h2>
+
+      <div class="about-grid">
+
+        <div class="about-card">
+          <h3>Ridhima</h3>
+          <p>
+            I am Ridhima, a 1st Year Computer Science Engineering student.
+            I created this project to improve my web development skills using
+            HTML, CSS, and JavaScript.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h3>Pulkit Dhiman</h3>
+          <p>
+            Pulkit Dhiman is my project partner. We worked together on designing,
+            developing, and improving this YouTube Playlist Maker project.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Professor Section -->
+    <section class="box professor-box" id="guide">
+      <h2>Project Guide / Professor</h2>
+
+      <div class="professor-card">
+
+        <!-- Professor Image -->
+        <img src="Screenshot 2026-05-08 143526.png" alt="Professor Image" class="professor-img">
+
+        <div>
+          <h3>Our Professor</h3>
+          <p>
+            We sincerely thank our professor DR.Abhisek Thakur for guiding and supporting us
+            throughout this project.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
